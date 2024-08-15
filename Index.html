@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher</title>
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="scripts.js"></script> 
+    <header>
+        <h1>Human Computer Interaction (Project)&nbsp;&nbsp;<sub>Dr. Suhair Amer</sub></h1>
+        <nav>
+            <a href="#caesarCipher" onclick="showImpl('caesarCipher')">Caesar Cipher&nbsp;&nbsp;|</a>
+            <a href="#monoalphabeticCipher" onclick="showImpl('monoalphabeticCipher')">Monoalphabetic Cipher&nbsp;&nbsp;|</a>
+            <a  onclick="redirect('id')">Back to Main Page&nbsp;&nbsp;</a>
+        </nav>
+    </header>
+    <div class="container">
+    <div id="intro" style="color: #5b6670;">
+        <h1 style="text-align: center;">Exploring Encryption and 
+            Decryption with Ceaser and Monoalphabetic
+            Ciphers.</h1>
+        <h3 style="text-align: center;">Please click one of the links in the header to learn more about the<br> Caesar Cipher and Monoalphabetic Cipher.</h3>
+        <h1 style="text-align: center;">Project!</h1>
+        <div style="margin-left: 35%">
+        <h3><b>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</b> Jyothi Muchinthala<br>
+        <b>UID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b> S02062411<br>
+        <b>Subject&nbsp;&nbsp; :</b> Human Computer Interaction<br>
+        <b>Professor :</b> Dr. Suhair Amer</h3>
+        </div>
+    </div>
+  </div>    
+    <div id="monoalphabeticCipher" style="display: none;">
+        <h1 style="text-align: center;">Discover about Monoalphabetic Cipher Learning with ease!</h1>
+        <nav>
+            <a href="#" onclick="showMonoImpl('checkteachingmaterialMonoalphabeti')">Check Material&nbsp;&nbsp;|</a>
+            <a href="#" onclick="showMonoImpl('checkteachingmaterialMonoalphabetic')">Encryption and Decryption&nbsp;&nbsp;|</a>
+            <a href="#" onclick="showMonoImpl('quizEncryptionMonoalphabetic')">Quiz&nbsp;&nbsp;</a>
+        </nav>
+        
+        <div class="container">
+        <div id="checkteachingmaterialMonoalphabeti" style="display: none;">
+            <h2>Monoalphabetic Cipher:</h2>
+            <li>A mono-alphabetic cipher (aka simple substitution cipher) is a substitution cipher where each letter of the plain text is replaced with another letter of the alphabet. It uses a fixed key which consist of the 26 letters of a “shuffled alphabet”.</li>
+            <h2>Encryption Process:</h2>
+            <ol>
+                <li><strong>Key Generation:</strong> In the Monoalphabetic Cipher, the key is a mapping of each letter of the alphabet 
+                to another letter. This mapping defines the substitution pattern. For example, 'A' might be substituted with 'F', 'B' with 'X', and so on. 
+                The key needs to be kept secret between the sender and the receiver.</li>
+                <li><strong>Substitution:</strong> To encrypt a message, each letter of the plaintext is replaced with its corresponding 
+                letter according to the key. For example, if the key says 'A' is substituted with 'F', every 'A' in the plaintext will be replaced with 'F', 
+                and so on for the entire message.</li>
+                <li><strong>Result:</strong> The encrypted message, known as ciphertext, is the result of the substitution process. 
+                The ciphertext can then be transmitted over an insecure channel because it's unintelligible without knowledge of the key.</li>
+            </ol>
+
+            <h2>Decryption Process:</h2>
+            <ol>
+                <li><strong>Key:</strong> The recipient of the ciphertext must possess the key, which defines the substitution pattern 
+                used during encryption.</li>
+                <li><strong>Reverse Substitution:</strong> Using the key, each letter in the ciphertext is replaced by its corresponding 
+                letter in the reverse direction. For example, if 'F' corresponds to 'A' in the key, every 'F' in the ciphertext is replaced with 'A', 
+                and so on.</li>
+                <li><strong>Result:</strong> The result of this reverse substitution process is the original plaintext message.</li>
+            </ol>
+
+            <h2>Example:</h2>
+            <p>
+                Let's say we have a key where 'A' is substituted with 'F', 'B' with 'X', and so on. If we want to encrypt the plaintext message "DIVYA" using this key:
+            </p>
+            <ul>
+                <li>D is substituted with 'I'</li>
+                <li>I is substituted with 'N'</li>
+                <li>V is substituted with 'A'</li>
+                <li>Y is substituted with 'D'</li>
+                <li>A is substituted with 'F'</li>
+            </ul>
+            <p>
+                So, "DIVYA" becomes "INADF" in ciphertext. To decrypt "INADF" back to "DIVYA", we simply reverse the substitution using the same key:
+            </p>
+            <ul>
+                <li>I is substituted with 'D'</li>
+                <li>N is substituted with 'I'</li>
+                <li>A is substituted with 'V'</li>
+                <li>D is substituted with 'Y'</li>
+                <li>F is substituted with 'A'</li>
+            </ul>
+            <p>
+                So, "INADF" decrypts back to "DIVYA".
+            </p>
+
+            <h2>Strengths and Weaknesses:</h2>
+            <p>
+                <strong>Strengths:</strong> It's easy to understand and implement. It's suitable for educational purposes and for basic encryption needs where security is not a primary concern.<br>
+                <strong>Weaknesses:</strong> The Monoalphabetic Cipher is vulnerable to frequency analysis, where the frequency of letters in the ciphertext can be used to deduce the original message. It's also susceptible to known-plaintext attacks, where an attacker can deduce the key if they have access to both the ciphertext and a corresponding portion of the plaintext.
+            </p>
+            <h2>Resources:</h2>
+            <a href="https://www.101computing.net/mono-alphabetic-substitution-cipher/" target="_blank">https://www.101computing.net/mono-alphabetic-substitution-cipher/&nbsp;&nbsp;</a><br>
+            <a href="https://www.dcode.fr/monoalphabetic-substitution" target="_blank">https://www.dcode.fr/monoalphabetic-substitution&nbsp;&nbsp;</a>
+
+        </div>
+        
+        <div id="checkteachingmaterialMonoalphabetic" style="display: none;">
+         <h2>Monoalphabetic Cipher Encryption and Decryption</h2>
+         <label for="inputTextMonoalphabetic">Enter text:</label>
+         <input type="text" id="inputTextMonoalphabetic"><br><br>
+         <label for="keyMonoalphabetic">Enter key:</label> 
+         <input type="text" id="keyMonoalphabetic">
+         <label for="keyMonoalphabetic">*(number between 1 and 25):</label><br><br>
+         <button onclick="encryptMonoalphabetic()">Encrypt</button>
+         <button onclick="decryptMonoalphabetic()">Decrypt</button>
+         
+         <p><strong>Result:</strong> <span id="resultMonoalphabetic"></span></p>
+         <p style="color: #06af0c;" id="actionTextMonoalphabetic"></p>
+        </div>
+        
+        <div id="quizEncryptionMonoalphabetic" style="display: none;">
+            <form id="quizFormMonoalphabetic">
+                <ol>
+                    <li>
+                        <h3>What is the Monoalphabetic Cipher?</h3>
+                        <input type="radio" name="Monoalphabeticq1" value="B"> A) A symmetric encryption method<br>
+                        <input type="radio" name="Monoalphabeticq1" value="A"> B) A substitution cipher<br>
+                        <input type="radio" name="Monoalphabeticq1" value="C"> C) An asymmetric encryption technique<br>
+                        <input type="radio" name="Monoalphabeticq1" value="D"> D) An encryption method using multiple keys<br>
+                    </li>
+                    <li>
+                        <h3>In the Monoalphabetic Cipher, how many unique keys are used for encryption?</h3>
+                        <input type="radio" name="Monoalphabeticq2" value="A"> A) One<br>
+                        <input type="radio" name="Monoalphabeticq2" value="B"> B) Two<br>
+                        <input type="radio" name="Monoalphabeticq2" value="C"> C) Three<br>
+                        <input type="radio" name="Monoalphabeticq2" value="D"> D) Four<br>
+                    </li>
+                    <li>
+                        <h3>Which of the following statements about the Monoalphabetic Cipher is true?</h3>
+                        <input type="radio" name="Monoalphabeticq3" value="A"> A) It uses a different key for each letter in the plaintext<br>
+                        <input type="radio" name="Monoalphabeticq3" value="B"> B) It is resistant to frequency analysis attacks<br>
+                        <input type="radio" name="Monoalphabeticq3" value="C"> C) It maps each letter of the plaintext to a unique letter in the ciphertext<br>
+                        <input type="radio" name="Monoalphabeticq3" value="D"> D) It requires a complex key generation process<br>
+                    </li>
+                    <li>
+                        <h3>In the Monoalphabetic Cipher, if 'A' encrypts to 'D', what does 'B' encrypt to?</h3>
+                        <input type="radio" name="Monoalphabeticq4" value="A"> A) 'A'<br>
+                        <input type="radio" name="Monoalphabeticq4" value="B"> B) 'E'<br>
+                        <input type="radio" name="Monoalphabeticq4" value="C"> C) 'C'<br>
+                        <input type="radio" name="Monoalphabeticq4" value="D"> D) 'F'<br>
+                    </li>
+                    <li>
+                        <h3>Which of the following is a weakness of the Monoalphabetic Cipher?</h3>
+                        <input type="radio" name="Monoalphabeticq5" value="A"> A) Vulnerable to frequency analysis attacks<br>
+                        <input type="radio" name="Monoalphabeticq5" value="B"> B) Requires a large key size for security<br>
+                        <input type="radio" name="Monoalphabeticq5" value="C"> C) Provides perfect secrecy<br>
+                        <input type="radio" name="Monoalphabeticq5" value="D"> D) Can encrypt numerical data efficiently<br>
+                    </li>
+                    <li>
+                        <h3>What is the process to decrypt a message encrypted with the Monoalphabetic Cipher?</h3>
+                        <input type="radio" name="Monoalphabeticq6" value="A"> A) Use the same key used for encryption<br>
+                        <input type="radio" name="Monoalphabeticq6" value="B"> B) Perform a reverse substitution using the ciphertext<br>
+                        <input type="radio" name="Monoalphabeticq6" value="C"> C) Apply a mathematical function to the ciphertext<br>
+                        <input type="radio" name="Monoalphabeticq6" value="D"> D) Perform a frequency analysis on the ciphertext<br>
+                    </li>
+                </ol>
+                <div style="text-align: center;">
+                    <div id="quizResultsMonoalphabetic"></div>          
+                    <button type="submit" value="Submit" form="quizFormMonoalphabetic">Submit</button>
+                  </div>
+                <br>
+            </form>
+        </div>
+       </div>
+    </div>
+    <div id="caesarCipher" style="display: none;">
+            <h1 style="text-align: center;">Discover about Ceaser Cipher Learning with ease!</h1>
+            <nav>
+                <a href="#" onclick="showCeaserImpl('checkteachingmaterialCaesar')">Check Material&nbsp;&nbsp;|</a>
+                <a href="#" onclick="showCeaserImpl('useencryptionCaesar')">Encryption and Decryption&nbsp;&nbsp;|</a>
+                <a href="#" onclick="showCeaserImpl('quizEncryptionCaesar')">Quiz&nbsp;&nbsp;</a>
+            </nav>
+        </div>
+        <div class="container">
+        <div id="checkteachingmaterialCaesar" style="display: none;">
+            <h2>Caesar Cipher:</h2>
+            <p><strong>What is Caesar Cipher:</strong> To encrypt a message using the Caesar Cipher, you shift each letter in the plaintext by a fixed number of positions down the alphabet. For example, if the fixed number (key) is 3, then each letter in the plaintext is replaced by the letter three positions down the alphabet.</p>
+        <p><strong>Encryption:</strong> To encrypt a message using the Caesar Cipher, you shift each letter in the plaintext by a fixed number of positions down the alphabet. For example, if the fixed number (key) is 3, then each letter in the plaintext is replaced by the letter three positions down the alphabet.</p>
+
+        <p>Let's encrypt the message "JYOTHI" with a Caesar Cipher using a key of 3:</p>
+
+        <table>
+        <tr>
+            <th>Original Letter</th>
+            <th>Encrypted Letter</th>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>O</td>
+        </tr>
+        <tr>
+            <td>Y</td>
+            <td>T</td>
+        </tr>
+        <tr>
+            <td>O</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>T</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>H</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>N</td>
+        </tr>
+        </table>
+
+        <p>So, "JYOTHI" becomes "OTDYMN" after encryption with a key of 5.</p>
+
+        <p><strong>Decryption:</strong> Decryption is the reverse process of encryption. To decrypt a message encrypted with the Caesar Cipher, you shift each letter in the ciphertext back by the same number of positions that you used for encryption.</p>
+
+        <p>Using the same key of 5, let's decrypt the ciphertext "OTDYMN":</p>
+
+        <table>
+        <tr>
+            <th>Encrypted Letter</th>
+            <th>Decrypted Letter</th>
+        </tr>
+        <tr>
+            <td>O</td>
+            <td>J</td>
+        </tr>
+        <tr>
+            <td>T</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>O</td>
+        </tr>
+        <tr>
+            <td>Y</td>
+            <td>T</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td>N</td>
+            <td>I</td>
+        </tr>
+        </table>
+
+        <p>So, "OTDYMN" becomes "JYOTHI" after decryption with a key of 5.</p>
+        <h2>Resources:</h2>
+            <a href="https://brilliant.org/wiki/caesar-cipher/" target="_blank">https://brilliant.org/wiki/caesar-cipher/&nbsp;&nbsp;</a><br>                
+            <a href="https://likegeeks.com/python-caesar-cipher/" target="_blank">https://likegeeks.com/python-caesar-cipher/&nbsp;&nbsp;</a>                           
+        </div>
+        <div id="useencryptionCaesar" style="display: none;">
+            <h3>Encryption and Decryption for Caesar Cipher</h3> 
+            <label for="plaintext">Enter text:</label>
+            <input type="text" id="inputText"><br><br>
+            <label for="key">Enter key :</label>            
+            <input type="number" id="key" min="1" max="25">
+            <label for="key">*(number between 1 and 25):</label><br><br>
+            <button onclick="encrypt()">Encrypt</button>
+            <button onclick="decrypt()">Decrypt</button>
+            <p><strong>Result:</strong> <span id="result"></span></p>  
+            <p style="color: #06af0c;" id="actionText"></p>         
+        </div>
+        <div id="quizEncryptionCaesar" style="display: none;">
+            <form id="quizForm">
+                <ol>
+                    <li>
+                        <h3>What is the Caesar cipher?</h3>
+                        <input type="radio" name="q1" value="B"> A) A modern encryption algorithm<br>
+                        <input type="radio" name="q1" value="A"> B) A substitution cipher<br>
+                        <input type="radio" name="q1" value="C"> C) A symmetric encryption method<br>
+                        <input type="radio" name="q1" value="D"> D) A public-key encryption technique<br>
+                    </li>
+                    <li>
+                        <h3>In the Caesar cipher, what happens to each letter in the plaintext?</h3>
+                        <input type="radio" name="q2" value="A"> A) It is randomly shuffled<br>
+                        <input type="radio" name="q2" value="C"> B) It is replaced by the next letter in the alphabet<br>
+                        <input type="radio" name="q2" value="B"> C) It is shifted by a fixed number of positions down the alphabet<br>
+                        <input type="radio" name="q2" value="D"> D) It is converted into a numerical code<br>
+                    </li>
+                    <li>
+                        <h3>What is the maximum number of possible keys in the Caesar cipher?</h3>
+                        <input type="radio" name="q3" value="A"> A) 26<br>
+                        <input type="radio" name="q3" value="B"> B) 52<br>
+                        <input type="radio" name="q3" value="C"> C) 13<br>
+                        <input type="radio" name="q3" value="D"> D) 25<br>
+                    </li>
+                    <li>
+                        <h3>If the key in the Caesar cipher is 3, what does the letter 'A' encrypt to?</h3>
+                        <input type="radio" name="q4" value="A"> A) X<br>
+                        <input type="radio" name="q4" value="B"> B) D<br>
+                        <input type="radio" name="q4" value="C"> C) C<br>
+                        <input type="radio" name="q4" value="D"> D) Z<br>
+                    </li>
+                    <li>
+                        <h3>Which of the following statements about the Caesar cipher is true?</h3>
+                        <input type="radio" name="q5" value="A"> A) It is unbreakable even with modern computers<br>
+                        <input type="radio" name="q5" value="B"> B) It is a form of asymmetric encryption<br>
+                        <input type="radio" name="q5" value="C"> C) It can only encrypt letters of the alphabet<br>
+                        <input type="radio" name="q5" value="D"> D) It requires a different key for each letter in the plaintext<br>
+                    </li>
+                    <li>
+                        <h3>In the Caesar cipher, what is the process to decrypt a message?</h3>
+                        <input type="radio" name="q6" value="A"> A) Shift each letter in the ciphertext forward in the alphabet<br>
+                        <input type="radio" name="q6" value="B"> B) Shift each letter in the plaintext forward in the alphabet<br>
+                        <input type="radio" name="q6" value="C"> C) Shift each letter in the ciphertext backward in the alphabet<br>
+                        <input type="radio" name="q6" value="D"> D) Shift each letter in the plaintext backward in the alphabet<br>
+                    </li>
+                </ol>
+                <div style=" text-align: center;">
+                    <div id="quizResults"></div>          
+                    <button type="submit" value="Submit">Submit</button>
+                  </div>
+                <br>
+            </form>
+        </div>
+    </div>
+    <footer>
+       Name: &nbsp;Jyothi Muchinthala &nbsp;&nbsp; |&nbsp;&nbsp; UID:&nbsp; S02062411
+    </footer>
+    <script type="text/javascript"> //This script takes quiz answers from Ceaser Cipher and displays the result.
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var answers = {
+        q1: document.querySelector('input[name="q1"]:checked').value,
+        q2: document.querySelector('input[name="q2"]:checked').value,
+        q3: document.querySelector('input[name="q3"]:checked').value,
+        q4: document.querySelector('input[name="q4"]:checked').value,
+        q5: document.querySelector('input[name="q5"]:checked').value,
+        q6: document.querySelector('input[name="q6"]:checked').value
+    };
+
+    var correctAnswers = {
+        q1: "B",
+        q2: "C",
+        q3: "A",
+        q4: "B",
+        q5: "C",
+        q6: "C"
+    };
+
+    var score = 0;
+    for (var key in answers) {
+        if (answers[key] === correctAnswers[key]) {
+            score++;
+        }
+    }
+    var quizResults = document.getElementById("quizResults");
+    quizResults.innerHTML = "<h2>Quiz Results</h2>";
+    quizResults.innerHTML += "<p>You answered <span style='color: #06af0c;'>" + score + "</span> out of 6 questions correctly.</p>";
+
+});
+///This script takes quiz answers from Monoalphabetic Cipher and displays the result.
+document.getElementById("quizFormMonoalphabetic").addEventListener("submit", function(event) {
+      event.preventDefault();
+    var answers = {
+        q1: document.querySelector('input[name="Monoalphabeticq1"]:checked').value,
+        q2: document.querySelector('input[name="Monoalphabeticq2"]:checked').value,
+        q3: document.querySelector('input[name="Monoalphabeticq3"]:checked').value,
+        q4: document.querySelector('input[name="Monoalphabeticq4"]:checked').value,
+        q5: document.querySelector('input[name="Monoalphabeticq5"]:checked').value,
+        q6: document.querySelector('input[name="Monoalphabeticq6"]:checked').value
+    };
+
+    var correctAnswers = {
+        q1: "B",
+        q2: "A",
+        q3: "C",
+        q4: "B",
+        q5: "A",
+        q6: "A"
+    };
+
+    var score = 0;
+    for (var key in answers) {
+        if (answers[key] === correctAnswers[key]) {
+            score++;
+        }
+    }
+
+    var quizResultsMonoalphabetic = document.getElementById("quizResultsMonoalphabetic");
+    quizResultsMonoalphabetic.innerHTML = "<h2>Quiz Results</h2>";
+    quizResultsMonoalphabetic.innerHTML += "<p>You answered <span style='color: #06af0c;'>" + score + "</span> out of 6 questions correct.</p>";
+});
+    </script>
+</body>
+</html>
